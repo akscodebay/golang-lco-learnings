@@ -1,0 +1,313 @@
+{
+	"info": {
+		"_postman_id": "061f0d27-c1c4-42f9-935f-174f865a3175",
+		"name": "go-lco-course",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36935959"
+	},
+	"item": [
+		{
+			"name": "employee",
+			"item": [
+				{
+					"name": "home",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 4,\r\n    \"name\": \"John Aks\",\r\n    \"email\": \"john@example.com\",\r\n    \"address\": {\r\n        \"house\": \"123\",\r\n        \"street\": \"Main St\",\r\n        \"city\": \"New York\",\r\n        \"state\": \"NY\",\r\n        \"country\": \"India\",\r\n        \"zip_code\": \"10001\"\r\n    },\r\n    \"mobile\": \"123-456-7890\",\r\n    \"project\": [\r\n        \"Project A\",\r\n        \"Project B\"\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8080",
+							"host": [
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllEmployees",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/employees",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOneEmployee",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/employees/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employees",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createEmployeeRecord",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"John Doe\",\r\n    \"email\": \"john@example.com\",\r\n    \"address\": {\r\n        \"house\": \"123\",\r\n        \"street\": \"Main St\",\r\n        \"city\": \"New York\",\r\n        \"state\": \"NY\",\r\n        \"country\": \"USA\",\r\n        \"zip_code\": \"10001\"\r\n    },\r\n    \"mobile\": \"123-456-7890\",\r\n    \"project\": [\r\n        \"Project A\",\r\n        \"Project B\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/employees",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateEmployee",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 4,\r\n    \"name\": \"John Aks\",\r\n    \"email\": \"john@example.com\",\r\n    \"address\": {\r\n        \"house\": \"123\",\r\n        \"street\": \"Main St\",\r\n        \"city\": \"New York\",\r\n        \"state\": \"NY\",\r\n        \"country\": \"India\",\r\n        \"zip_code\": \"10001\"\r\n    },\r\n    \"mobile\": \"123-456-7890\",\r\n    \"project\": [\r\n        \"Project A\",\r\n        \"Project B\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/employees",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteEmployee",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/employees/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employees",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "netflix",
+			"item": [
+				{
+					"name": "getOneMovie",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/movies/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "allmovies",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/movies",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createMovie",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"go-lang\",\r\n    \"watched\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/movies",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteMovie",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/movies/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletemovies",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/movies",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateMovies",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 4,\r\n    \"title\": \"In the sleep\",\r\n    \"watched\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/movies",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
